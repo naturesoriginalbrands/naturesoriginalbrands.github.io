@@ -1,6 +1,6 @@
 # Dog Food Calculator: Hosted @ naturesoriginalbrands.github.io
 
-[![Simply Raw Brand Logo](https://github.com/naturesoriginalbrands/naturesoriginalbrands.github.io/blob/main/images/logo_sr.png?raw=true)](www.simplyrawmeals.com)
+[![Simply Raw Brand Logo](https://github.com/naturesoriginalbrands/naturesoriginalbrands.github.io/blob/main/images/logo_sr.png?raw=true)](https://www.simplyrawmeals.com)
 
 
 This website hosts a front-end "calculator" tool for getting a first estimate of how much your dog should eat per day.  
