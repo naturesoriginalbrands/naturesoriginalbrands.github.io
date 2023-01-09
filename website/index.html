@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="javascript/main.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+</style>
+
+
+  <link rel="stylesheet" href="css/style.css"></link>
+  <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Seymour One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lustria' rel='stylesheet'>
+</head>
+<header>
+  <h1>Daily Dog Food Calculator</h1>
+  <hr/> 
+</header> 
+<body>
+  <div class="section">
+  <p>This calculator will help you learn more about how much food your dog should eat.  However, the needs of your dog are unique and may differ from these predictions by up to 50%.  You should consult a veterinarian or animal dietician before making decisions about your pet's health.  This calculator is for personal and educational use only, and is in no way advice from a medical or veterinary professional.<br><br>
+
+    To calculate the amount of food your dog needs, we just need some information about your dog's age and weight.  This information will not be stored or accessed by Nature's Diet or Nature's Original Brands.
+  </p>
+  <hr class="thin">
+  <form id="calculator" style="display: inline">
+    <label for="age" class="question"><mark>How Old is Your Dog?</mark></label>
+    <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
+    <select name="age" id="age" >
+      <option disabled selected value> -- select an option -- </option>
+      <option value="puppy 0-4 months">Puppy (0-4 months)</option>
+      <option value="puppy 4+ months">Puppy (4+ months)</option>
+      <option value="adult">Adult</option>
+      <option value="senior">Senior</option>
+    </select><br>
+    <hr class="thin">
+
+    <label for "idealweightinput" class="question"><mark>What is Your Dog's Current Weight?</mark></label><br>
+    <input  type="number"  id="weightinput" max="500" min="0" step="5" required="true" placeholder="weight..."></input>
+    <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
+    <span class="thinoutlinebox">
+      <input type="radio" id="lb" name="units" value = "lb" required="true" >
+      <label for="lb" class="radiolabel">Pounds</label>
+    </span>
+    <span class="thinoutlinebox">
+      <input type="radio" id="kg" name="units" value="kg" required="true">
+      <label for="kg" class="radiolabel">Kilograms</label><br>
+    </span>
+    <hr class="thin">
+    <button id="calculate_button" type="button" form="calculator" class="button-5" onclick="myFunction()">Calculate</button>
+  </form>
+</div>
+  <hr>
+ <div class="section">
+  <table>
+    <tr>
+      <th class="empty topside">
+        <div id="summary">Your results will go here</div>
+      </th>
+      <th id="left_tab" class="gain topside"><h2 id="left_top"   >Gain Weight (5%)</h2></th>
+      <th id="middle_tab" class="base topside"><h2 id="middle_top" 2>Maintain Weight</h2></th>
+      <th id="right_tab" class="loss topside"><h2 id="right_top"  2>Lose Weight (5%)</h2></th>
+    </tr>
+    <tr>
+      <th id="row1"><h2>Calories Per Day</h2></th>
+      <th id="calories_gain" class="gain"></th>
+      <th id="calories" class="base"></th>
+      <th id="calories_loss" class="loss"></th>
+    </tr>
+    <tr>
+      <th id="row2"><h2>Cups of Dry SimplyRaw® Per Day</h2></th>
+      <th id="cups_gain" class="gain"></th>
+      <th id="cups" class="base"></th>
+      <th id="cups_loss" class="loss"></th>
+    </tr>
+    <tr>
+      <th id="row3"><h2>Bags of SimplyRaw® Per Month</h2></th>
+      <th id="bags_gain" class="gain"></th>
+      <th id="bags"  class="base"></th>
+      <th id="bags_loss" class="loss"></th>
+    </tr>
+  </table>
+  <caption>Source: https://vet.osu.edu/vmc/companion/our-services/nutrition-support-service/basic-calorie-calculator</caption>
+</div>
+  <hr>
+<div class="section">
+  <h2 id="calcinfoHeader">About the Calculator</h2>
+  <p id="calcinfo">
+    Lorem ipsum.  Informational paragraph about the dog food calculator tool.  In this paragraph we discuss the <strong>Resting Energy Requirements</strong> of dogs, and why someone should use our tool.<br>
+    Note: we are not veterinarians, and the information on this page does not represent the opinion of an expert.  Please consult a dietician before making decisions about your pet's daily food intake.
+    <br><br>
+
+    Some related facts:<br>
+      <br>
+      Pets' <abbr>RER</abbr> (Resting Energy Requirements) depend on weight, neutered/intact status, breed, and age.<br>
+      <br>
+      These calculations can only give a "ballpark" estimate: adjusting in the long term the amount of food you feed your pet will necessarily depend on personalized attention to a pet's needs.<br>
+      <br>
+      Muscle condition, as well as coat and skin quality, are affected by the amount of protein that a pet is getting.  If a pets has a healthy muscle condition score, and good skin and coat quality, that is an indication that they are getting enough protein.<br>
+      <br>
+	     https://vet.osu.edu/vmc/companion/our-services/nutrition-support-service/basic-calorie-calculator#:~:text=(Resting%20Energy%20Requirements%20or%20RER,4%20%E2%89%88%20400%20Calories%2Fday.
+  </p>
+</div>
+</body>
+</html>
