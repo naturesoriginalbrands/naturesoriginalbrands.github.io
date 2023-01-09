@@ -160,7 +160,7 @@ function toggle_audio_controls(onoroff) {
 
 
 var snd = new Audio("audio/bark.mp3");
-var song = new Audio("audio/I\ got\ a\ Stick\ Feat\ James\ Gavins.mp3")
+var song = new Audio("audio/song.mp3")
 
 function myFunction() {
     i += 1
