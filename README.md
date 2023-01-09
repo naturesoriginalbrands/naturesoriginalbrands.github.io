@@ -9,7 +9,7 @@ The equations and datapoints which this calculator runs on are sourced from http
 
 This entire Github Pages site is a work in progress, and likely to change.
 
-All music you hear is licensed under a creative commons license by the generous and prolific composer Kevin MacLeod of incompetech.com
+All music you hear is licensed under a creative commons license by the generous, prolific Kevin MacLeod of incompetech.com
 
 The calculator tool provided is for educational purposes only, and to help our customers estimate how much SimplyRaw® raw, natural, freeze dried dog food to purchase.  Please consult with a veterinarian or animal dietician before making decisions about your pet's diet.
 
