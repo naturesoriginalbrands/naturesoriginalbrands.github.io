@@ -8,8 +8,6 @@ function rer(weight_in_kilos) {
 
 var music = true
 
-
-song = audio.new("io/devonshire_waltz.mp3")
 function no_music() {
     song.pause();
     song.currentTime = 0;
@@ -162,7 +160,7 @@ function toggle_audio_controls(onoroff) {
 
 
 var snd = new Audio("audio/bark.mp3");
-var song = new Audio("audio/song.mp3");
+var song = new Audio("audio/song.mp3")
 
 function myFunction() {
     i += 1
