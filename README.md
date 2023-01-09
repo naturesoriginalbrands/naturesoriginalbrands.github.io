@@ -1,4 +1,4 @@
-# naturesoriginalbrands.github.io
+# Dog Food Calculator: Hosted @ naturesoriginalbrands.github.io
 This website hosts a front-end "calculator" tool for getting a first estimate of how much your dog should eat per day.  
 That way you will know how much SimplyRaw® to purchase!  Learn more at www.naturesdietpet.com and www.simplyrawmeals.com
 The equations and datapoints which this calculator runs on are sourced from https://vet.osu.edu/vmc/companion/our-services/nutrition-support-service/basic-calorie-calculator
