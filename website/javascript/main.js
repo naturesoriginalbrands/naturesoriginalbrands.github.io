@@ -6,6 +6,23 @@ function rer(weight_in_kilos) {
     return (weight_in_kilos ** 0.75) * 70;
 }
 
+var music = true
+
+function no_music() {
+    song.pause();
+    song.currentTime = 0;
+    document.getElementById("audioControls").onclick = function() { yes_music(); }
+    document.getElementById("nested_icon").style.display = "block"
+    music = false
+}
+
+function yes_music() {
+    song.play();
+    document.getElementById("audioControls").onclick = function() { no_music(); }
+    document.getElementById("nested_icon").style.display = "none"
+    music = true
+}
+
 function factor_from_selections(age, weight) {
     switch (age) {
     case "puppy 0-4 months":
@@ -128,10 +145,29 @@ function resetCalculateButton() {
     button.innerHTML = "Calculate"
 }
 
+function toggle_audio_controls(onoroff) {
+  var x = document.getElementById("audioControls");
+  if (onoroff) {
+    x.style.display = "inline";
+  } else {
+      console.log("okay")
+      x.style.display = "none";
+      song.pause()
+      song.currentTime = 0;
+
+  }
+}
+
+
+var snd = new Audio("audio/bark.mp3");
+var song = new Audio("audio/I\ got\ a\ Stick\ Feat\ James\ Gavins.mp3")
+
 function myFunction() {
     i += 1
     button = document.getElementById("calculate_button")
     button.innerHTML = items[i % 5]
+    snd.currentTime=0;
+    snd.play()
     setTimeout(resetCalculateButton, 500)
     results = getFormResults()
     calories_n      = results[0]
@@ -158,6 +194,11 @@ function myFunction() {
 	bags = document.getElementById("bags");
 	bags.innerHTML =Math.round(calories_n/320/17*30*10)/10 + " bags";
 	if (calories_gain_n == "Weight gain/loss data not available for puppies") {
+	    toggle_audio_controls(true)
+	    if (music == true){
+		song.currentTime=0;
+	        song.play()
+	    }
 	    document.getElementById("row1").style.backgroundColor=puppyColor("calories");
 	    document.getElementById("calories").style.backgroundColor=puppyColor("calories");
 	    document.getElementById("row2").style.backgroundColor=puppyColor("cups");
@@ -167,6 +208,7 @@ function myFunction() {
 	    document.getElementById("left_tab").classList.add("rainbow_wrapper")
 	    document.getElementById("middle_tab").classList.add("rainbow_wrapper")
 	    document.getElementById("right_tab").classList.add("rainbow_wrapper")
+	    document.getElementById("audioControls").classList.add("rainbow_wrapper")
 	    for (metric of ["bags", "cups", "calories"]) {
 		goal = "gain";
 		doc = document.getElementById(metric+"_"+goal);
@@ -207,7 +249,7 @@ function myFunction() {
 	    
 	}
 	else {
-	    
+	    toggle_audio_controls(false)
 	    cups.style.backgroundColor = "#F6834B";
 	    calories.style.backgroundColor = "#F6834B";
 	    bags.style.backgroundColor = "#F6834B";

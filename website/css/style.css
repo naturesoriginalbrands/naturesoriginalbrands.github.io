@@ -3,19 +3,19 @@ body {
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 95%, rgba(100,250,250,0.2) 100%);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
     body {
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 5%;
+	margin-right: 5%;
     }
 	
 
     .section {
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
     }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     select, input[type=number], button{
 	font-size: 3em !important;
 	margin: 0.5em;
@@ -285,4 +285,27 @@ hr {
     border: none;
     border-radius: 5px;
     border-top: 10px solid #F25203
+}
+
+#container_icon {
+  position: relative
+}
+
+#nested_icon {
+    position: absolute;
+    top: -0.22em;
+    left: -0.22em;;
+    font-size: 200%;
+    color: rgba(217, 83, 79, 0.7);
+}
+
+#audioControls {
+    width: 70px;
+    height: 70px;
+    display: inline;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    bottom: 2px;
+    position: relative;
 }
