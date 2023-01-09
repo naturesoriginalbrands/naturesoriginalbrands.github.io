@@ -309,3 +309,21 @@ hr {
     bottom: 2px;
     position: relative;
 }
+
+.expandable:hover{
+    opacity: 0.5
+}
+
+.expandable:focus{
+    color: #424242; 
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(5.15) translate(100px,0px);
+  -ms-transform: scale(5.15) translate(100px,0px); /* IE 9 */
+  -webkit-transform: scale(5.15) translate(100px,0px); /* Safari and Chrome */
+
+}
