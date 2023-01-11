@@ -79,9 +79,10 @@ function getFormResults() {
 	return ["Please select units and try again", "", ""];
     }
     const inputweight = document.querySelector('#weightinput').value
-    if (inputweight === "" || isNaN(inputweight*1) ) {	
+    console.log(inputweight)
+    if (inputweight === "" || isNaN(inputweight*1) || inputweight*1 <= 0.0 ) {	
 	flash('#weightinput');
-	return ["Please input valid weights and try again", "", ""];
+	return ["Please input a valid weight and try again", "", ""];
     }
     if (lb) {
 	weight = kilos(inputweight)
