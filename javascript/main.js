@@ -56,15 +56,31 @@ const factortable = {
     "puppy 4+ months"	: 2.0
 }
 
+function flash(selector) {
+    node =  document.querySelector(selector)
+    node.classList.add("animate__animated", "animate__bounce")
+    node.classList.add("animate__bounce")
+    function handleAnimationEnd(event) {
+	event.stopPropagation();
+	node.classList.remove("animate__animated")
+	node.classList.remove("animate__bounce")
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+}
+
+
 function getFormResults() {
     const lb = document.querySelector('#lb').checked;        
     const kg = document.querySelector('#kg').checked;        
     
     if (! (lb || kg)) {
+	flash('.thinoutlinebox');
 	return ["Please select units and try again", "", ""];
-    }    
+    }
     const inputweight = document.querySelector('#weightinput').value
-    if (inputweight === "" || isNaN(inputweight*1) ) {
+    if (inputweight === "" || isNaN(inputweight*1) ) {	
+	flash('#weightinput');
 	return ["Please input valid weights and try again", "", ""];
     }
     if (lb) {
@@ -80,7 +96,10 @@ function getFormResults() {
     else if (ageindex == 2) {age = "puppy 4+ months"}
     else if (ageindex == 3) {age = "adult"}
     else if (ageindex == 4) {age = "senior"}
-    else                    {return ["Please select an age and try again", "Please Try Again", "Please Try Again"]}
+    else                    {
+	flash("#age")
+	return ["Please select an age and try again", "Please Try Again", "Please Try Again"]
+    }
     
     kinda_dog = age.slice(0,6);
     console.log(kinda_dog)
@@ -201,7 +220,8 @@ function myFunction() {
 	bags.innerHTML =Math.round(calories_n/320/17*30*10)/10 + " bags";
 	if (calories_gain_n == "Weight gain/loss data not available for puppies") {
 	    if (calories_loss_n == "Simply Raw not recommended under 4 months") {
-		bags.innerHTML = cups.innerHTML = "We do not recommend feeding SimplyRaw® to puppies under 4 months"
+		cups.innerHTML = "We do not recommend feeding SimplyRaw® to puppies under 4 months"
+		bags.innerHTML = "Consider using this calculator to plan for a future life stage."
 	    }
 	    toggle_audio_controls(true)
 	    if (music == true){
