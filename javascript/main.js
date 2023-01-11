@@ -310,13 +310,3 @@ function myFunction() {
 	}
     }
 }
-
-//Download Button for Graphic
-window.onload = function() {
-    var button = document.getElementById('btn-download');
-    button.addEventListener('click', function (e) {
-	var dataURL = canvas.toDataURL('image/png');
-	button.href = dataURL;
-    });
-
-}
