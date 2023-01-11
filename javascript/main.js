@@ -97,16 +97,22 @@ function getFormResults() {
     else {document.getElementById("summary").innerHTML = Math.round(inputweight) + " lb " + kinda_dog + dog_ + "<br>"}
 	
     factor = factor_from_selections(age, weight)
-    console.log(factor)
     if (age == "adult" || age == "senior") {
 	return [cals_from_kilos(weight, factor),
 	    cals_from_kilos(weight*1.05, "weight gain"),
 	    cals_from_kilos(weight*0.95, "weight loss")]
     }
     else {
-	return [cals_from_kilos(weight, factor),
-		"Weight gain/loss data not available for puppies",
-		"Weight gain/loss data not available for puppies"]
+	if (age == "puppy 0-4 months") {
+	    return [cals_from_kilos(weight, factor),
+		    "Weight gain/loss data not available for puppies",
+		    "Simply Raw not recommended under 4 months"]
+	}
+	else {
+	    return [cals_from_kilos(weight, factor),
+		    "Weight gain/loss data not available for puppies",
+		    "Weight gain/loss data not available for puppies"]
+	}
     }
     
 }
@@ -194,6 +200,9 @@ function myFunction() {
 	bags = document.getElementById("bags");
 	bags.innerHTML =Math.round(calories_n/320/17*30*10)/10 + " bags";
 	if (calories_gain_n == "Weight gain/loss data not available for puppies") {
+	    if (calories_loss_n == "Simply Raw not recommended under 4 months") {
+		bags.innerHTML = cups.innerHTML = "We do not recommend feeding SimplyRaw® to puppies under 4 months"
+	    }
 	    toggle_audio_controls(true)
 	    if (music == true){
 		song.currentTime=0;
