@@ -339,3 +339,13 @@ function myFunction() {
 	}
     }
 }
+
+function popup() {
+    overlay=document.querySelector(".overlay")
+    overlay.style.display="block"; // show/hide the overlay
+}
+
+function popup_out() {
+    overlay=document.querySelector(".overlay")
+    overlay.style.display="none"; // show/hide the overlay
+}
