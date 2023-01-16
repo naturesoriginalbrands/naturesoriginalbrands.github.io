@@ -49,7 +49,7 @@ body {
 }
 
 p {
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-size: 1em;
     overflow: hidden;
 }
@@ -65,13 +65,13 @@ p {
     margin: 4px;
     width: auto;
     display: inline-block;
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-weight: lighter;
     color: #AD3B02;
 }
 
 #summary {
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-size: 40px
 }
 
@@ -97,7 +97,7 @@ table {
 
 /* CSS */
 .button-5 {
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     align-items: center;
     background-clip: padding-box;
     background-color: #fa6400;
@@ -108,7 +108,7 @@ table {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-size: 1.5em;
     font-weight: 600;
     justify-content: center;
@@ -148,7 +148,7 @@ mark {
     width: 6em;
     height: 2.5em;
     color: brown;
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-size: 2em;
     font-style: italic;
     text-shadow: 1px 1px darkkhaki;
@@ -221,7 +221,7 @@ th.gain {
 		      
 }
 #left_top, #middle_top, #right_top{
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
 
 }
 
@@ -262,7 +262,7 @@ input[type=number] {
 }
 
 body {
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
 }
 
 #calories, #calories_gain, #calories_loss,
@@ -272,7 +272,7 @@ body {
 }
 
 h1, h2 {
-    font-family: futura-lt-w01-light,futura-lt-w05-light,sans-serif;
+    font-family:HelveticaNeue,futura-lt-w01-light,futura-lt-w05-light,sans-serif;
     font-weight: lighter
 }
 h1 {
