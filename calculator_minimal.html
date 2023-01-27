@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="javascript/main.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="icon" href="images/logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css'   rel="stylesheet"  type='text/css'></link>
+
+
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Seymour One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lustria' rel='stylesheet'>
+</head>
+<header>
+  <img width=30% src="images/simplyraw_transparent.png"><span style="font-size:70px; vertical-align: top">Calculator</span>
+  <hr/> 
+</header> 
+<body>
+  <div class="form">
+  <form id="calculator" style="display: inline">
+    <label for="age" class="question"><mark>What life stage is your dog?</mark></label>
+    <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
+    <select name="age" id="age" >
+      <option disabled selected value> -- select an option -- </option>
+      <option value="puppy 0-4 months">Puppy (0-4 months)</option>
+      <option value="puppy 4+ months">Puppy (4+ months)</option>
+      <option value="adult">Adult</option>
+      <option value="senior">Senior</option>
+    </select><br>
+    <hr class="thin">
+
+    <label for "idealweightinput" class="question"><mark>What is Your Dog's Current Weight?</mark></label><br>
+    <input  type="number"  id="weightinput" max="500" min="0" step="1" required="true" placeholder="weight..."></input>
+    <spacer type="horizontal" width="100" height="100"> ♢ </spacer>
+    <span class="thinoutlinebox">
+      <input type="radio" id="lb" name="units" value = "lb" required="true" >
+      <label for="lb" class="radiolabel">Pounds</label>
+    </span>
+    <span class="thinoutlinebox">
+      <input type="radio" id="kg" name="units" value="kg" required="true">
+      <label for="kg" class="radiolabel">Kilograms</label><br>
+    </span>
+    <hr class="thin">
+  </form>
+  </div> 
+  <div class="section">
+  <table>
+    <tr>
+      <th class="empty topside">
+        <div id="summary">Your results will go here</div>
+      </th>
+      <th id="left_tab" class="gain topside"><h2 id="left_top"   >Gain Weight (5%)</h2></th>
+      <th id="middle_tab" class="base topside"><h2 id="middle_top" 2>Maintain Weight</h2></th>
+      <th id="right_tab" class="loss topside"><h2 id="right_top"  2>Lose Weight (5%)</h2></th>
+    </tr>
+    <tr>
+      <th id="row1"><h2>Calories Per Day</h2></th>
+      <th id="calories_gain" class="gain"></th>
+      <th id="calories" class="base"></th>
+      <th id="calories_loss" class="loss"></th>
+    </tr>
+    <tr>
+      <th id="row2"><h2>Cups of Dry SimplyRaw® Per Day</h2></th>
+      <th id="cups_gain" class="gain"></th>
+      <th id="cups" class="base"></th>
+      <th id="cups_loss" class="loss"></th>
+    </tr>
+    <tr>
+      <th id="row3"><h2>Bags of SimplyRaw® Per Month</h2></th>
+      <th id="bags_gain" class="gain"></th>
+      <th id="bags"  class="base"></th>
+      <th id="bags_loss" class="loss"></th>
+    </tr>
+  </table>
+  <caption>Source: https://vet.osu.edu/vmc/companion/our-services/nutrition-support-service/basic-calorie-calculator</caption>
+</div>
+  <hr>
+  <div class="section">
+    <h2 id="idealWeightHeader">Determining Your Dog's Ideal Weight</h2>
+    <img src="images/BodyMassIndex_LARGE.png" tabindex="-1" class="expandable" alt="Body condition score chart for dogs: shows illustrations of the same dog at 5 different weights, and describes, using text, the detectable signs at each weight class.  For a text-rich PDF version of this file, visit https://wsava.org/wp-content/uploads/2020/01/Body-Condition-Score-Dog.pdf" width="200" height="150" onfocus="popup()" onfocusout="popup_out()">
+    <figcaption>Source: WSAVA</figcaption>
+    <a class="button" id="btn-download" download="Dog_BodyMassIndex.png" href="images/BodyMassIndex_LARGE.png">Download Image</a>
+</body>
+<footer><hr class="thin">&copy; Copyright 2023 Nature's Original Brands</footer>
+</html
