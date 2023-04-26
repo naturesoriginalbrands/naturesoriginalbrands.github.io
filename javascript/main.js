@@ -17,7 +17,7 @@ function no_music() {
 }
 
 function yes_music() {
-    song.play();
+    //song.play();
     document.getElementById("audioControls").onclick = function() { no_music(); }
     document.getElementById("nested_icon").style.display = "none"
     music = false
