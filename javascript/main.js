@@ -6,7 +6,7 @@ function rer(weight_in_kilos) {
     return (weight_in_kilos ** 0.75) * 70;
 }
 
-var music = true
+var music = false
 
 function no_music() {
     song.pause();
@@ -20,7 +20,7 @@ function yes_music() {
     song.play();
     document.getElementById("audioControls").onclick = function() { no_music(); }
     document.getElementById("nested_icon").style.display = "none"
-    music = true
+    music = false
 }
 
 function factor_from_selections(age, weight) {
